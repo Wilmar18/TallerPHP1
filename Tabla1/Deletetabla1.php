@@ -27,7 +27,8 @@ try
     $statement->execute();
   
     header('Content-type:application/json;charset=utf-8');
-    echo json_encode(["mensaje:Registro eliminado satisfactoriamente," => $results]);
+    echo json_encode(["mensaje"=> "Registro eliminado satisfactoriamente",
+                        "data" => $results]);
 
 } catch (PDOException $e) {
     print "Â¡Error!: " . $e->getMessage() . "<br/>";

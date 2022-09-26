@@ -34,7 +34,8 @@ try
     
   
     header('Content-type:application/json;charset=utf-8');
-    echo json_encode(["mensaje: Registro actualizado satisfactoriamente," => $results]);
+    echo json_encode(["mensaje"=> "Registro actualizado satisfactoriamente",
+    "data" => $results]);
 
 } catch (PDOException $e) {
     print "Â¡Error!: " . $e->getMessage() . "<br/>";
